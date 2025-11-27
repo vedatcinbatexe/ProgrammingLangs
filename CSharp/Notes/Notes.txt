@@ -51,7 +51,42 @@
 # Phase 2: Object-Oriented Programming (OOP)
 - Target: Structuring code into reusable, modular blocks.
 
-    > Classes & Objects:
+    [+] Classes & Objects:
+        - The Class:
+            - It defines what something is and what it can do.
+            - It doesn't exis in the real world yet. It's just a file on your computer
+                > Example: Car
+        
+        - The Object:
+            - It is the specific version created from the blueprint. It takes up memory
+                > Example: Ferrari 488 (Red), Toyota Corolla (White)
+
+        - Why do we need this -> In your Trading Bot, you dont want variables like goldPrice, silverPrice, oilPrice.
+        - You want a blueprint called "Asset", and then you create 3 objects from it
+
+        - C# read the Asset bluepring
+        - It reserved memory for asset1 and stored Gold data there
+        - It reserved separate memory for asset2 and stored Bitcoin there
+        - When you called "PrintInfo()", the objects looked at their own internal memory to print the correct data
+
+        - Constructor:
+            - A constructor is a special method that runs "automatically" the moment you create an object (when you use the "new" keyword)
+            - Think of it like opening a Bank Account. The bank won't let you just "open" an account and then decide your name and deposit money later
+            - They force you to privde your "Name" and "Initial Deposit" right at the start
+            - Constructors force your code to follow the same rules: "You cannot create an Asset unless you tell me its Name and Price immediately"
+            - A contructor looks like a method but:
+                - Ith as "no return type"
+                - It has the "exact same name" as the class
+
+            - Multiple Constructors (Overloading)
+                - Just like methods, you can have multiple constructors
+                - Imagine you want to support an asset where you don't know hte price yet
+            
+                > public Asset(string name, string symbol) {
+                    this.Name = name;
+                    this.Symbol = symbol;
+                    this.Price = 0; // Default value
+                }
 
     > The 4 Pillars of OOP:
 
