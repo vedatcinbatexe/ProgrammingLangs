@@ -5,6 +5,17 @@
 - Target: Being able to write simple scripts and solve algorithmic problems.
 
     > Structure & Syntax:
+        - Solution/Project: The whole box (your application)
+        - Namespace: A logical grouping like a folder or a section in a library. It prevents naming conflicts
+        - Class: The specific blueprint for an object (like "Customer" or "Product")
+        - Method: An action that the class can do (like "CalculateTax" or "SaveToDatabase")
+        - Statement: A single ilne of instruction
+
+        - Real World Example (E-commerce System)
+            - Namespace: Amazon.Paymentsystem -> This tels us we are in the Payment section of the app
+            - Class: CreditCardProcessor -> This is the specific tool we are using
+            - Method: ProcessTransaction() -> This is the action happening
+            - Statement: DeductMoney(100); -> The actual line of code doing the work
 
     > Variables & Data Types:
 
