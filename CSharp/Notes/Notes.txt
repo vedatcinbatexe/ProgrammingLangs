@@ -4,7 +4,7 @@
 # Phase 1: The Foundation (Syntax & Logic)
 - Target: Being able to write simple scripts and solve algorithmic problems.
 
-    > Structure & Syntax:
+    [+] Structure & Syntax: [+]
         - Solution/Project: The whole box (your application)
         - Namespace: A logical grouping like a folder or a section in a library. It prevents naming conflicts
         - Class: The specific blueprint for an object (like "Customer" or "Product")
@@ -17,13 +17,36 @@
             - Method: ProcessTransaction() -> This is the action happening
             - Statement: DeductMoney(100); -> The actual line of code doing the work
 
-    > Variables & Data Types:
+    [+] Variables & Data Types:
+        - Core Data Types
+            - int: Whole numbers. Used for counting
+            - double: Numbers with decimals. Used for general math, physics, or graphics
+            - decimal: High-precision decimal numbers. Crucial for money
+            - string: Text
+            - bool: True or false
 
-    > Control Flow:
+        - Database Mapping
+            - int -> SQL Database INT
+            - string -> SQL Database VARCHAR
+            - bool -> SQL Database BIT (0 or 1)
 
-    > Methods (Functions):
+    [+] Control Flow:
+        - Control flows is how you give your program a "brain".
+        - Without it, your code is just a list of instructions that runs once from top to bottom and dies
+        - Control flow allows you program to:
+            - Make Decisions: If x happens, do Y (if-else, switch)
+            - Repeat Actions: Do this 50 times(for, foreach, while)
 
-    > String Manipulation:
+    [+] Methods (Functions):
+        - A method is a reusable block of code that does one specific task
+        - Think of your Main method as the "Manager" of a factory. The manager shouldn't be thightening bolts or packing boxes.
+        - The Manager should just shout commands: "Start Machine", "Process Order", "Shut Down"
+        - Methods are those specific commands
+
+        - The Anatomy Of A Methods:
+            - Input(Parameters): What does the tool need to work
+            - Logic(Body): What does the tool do
+            - Output(Return Type) What does the tool give back in response
 
 # Phase 2: Object-Oriented Programming (OOP)
 - Target: Structuring code into reusable, modular blocks.
