@@ -1,2 +1,48 @@
-# C# Notes #
-------------------------------
+--------------------------------------------------------
+## TOPICS ##
+--------------------------------------------------------
+# Phase 1: The Foundation (Syntax & Logic)
+- Target: Being able to write simple scripts and solve algorithmic problems.
+
+    > Structure & Syntax:
+
+    > Variables & Data Types:
+
+    > Control Flow:
+
+    > Methods (Functions):
+
+    > String Manipulation:
+
+# Phase 2: Object-Oriented Programming (OOP)
+- Target: Structuring code into reusable, modular blocks.
+
+    > Classes & Objects:
+
+    > The 4 Pillars of OOP:
+
+    > Interfaces:
+
+Phase 3: Intermediate C# (The Toolset)
+Target: Handling data efficiently and writing cleaner code.
+
+    > Collections (Data Structures):
+
+    > Generics:
+
+    > Exception Handling:
+
+    > File I/O:
+
+    > LINQ (Language Integrated Query): **(Crucial) **
+
+# Phase 4: Advanced C# (Professional Level)
+- Target: Writing high-performance, asynchronous code (Essential for backend/trading bots).
+
+    > Asynchronous Programming: **(Most Important) **
+
+    > Delegates & Events:
+
+    > Advanced OOP:
+
+    > Reflection & Attributes:
