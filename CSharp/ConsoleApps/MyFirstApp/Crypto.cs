@@ -8,4 +8,10 @@ public class Crypto : Asset
     {
         this.WalletAddress = wallet;
     }
+
+    public override void PrintInfo()
+    {
+        base.PrintInfo();
+        Console.WriteLine($"   -> Type: Crypto, Wallet: {WalletAddress}");    
+    }
 }

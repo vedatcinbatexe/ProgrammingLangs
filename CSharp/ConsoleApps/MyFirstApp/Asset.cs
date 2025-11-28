@@ -21,8 +21,8 @@ namespace MyFirstApp {}
 
 public class Asset
 {
-    public string Name;
-    public decimal _price;
+    public string Name { get; set; }
+    public decimal Price { get; set; }
 
     // Constructor method here with the same name as class
     public Asset(string name, decimal price)
@@ -33,23 +33,8 @@ public class Asset
         this.Price = price;
     }
 
-    public decimal Price
-    {
-        get { return _price; }
-        set
-        {
-            if (value >= 0)
-            {
-                _price = value;
-            }
-            else
-            {
-                Console.WriteLine("Error: Price cannot be negative!");
-            }
-        }
-    }
-
-    public void PrintInfo()
+    // Add 'virtual' here
+    public virtual void PrintInfo()
     {
         Console.WriteLine($"Asset: {Name} - ${Price}");
     }
