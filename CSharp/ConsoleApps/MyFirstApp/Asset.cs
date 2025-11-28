@@ -19,7 +19,7 @@ namespace MyFirstApp {}
     }
 } */
 
-public class Asset
+public abstract class Asset
 {
     public string Name { get; set; }
     public decimal Price { get; set; }
@@ -38,4 +38,7 @@ public class Asset
     {
         Console.WriteLine($"Asset: {Name} - ${Price}");
     }
+    
+    // Abstract Method: No body {}. No logic
+    public abstract decimal CalculateTax();
 }
