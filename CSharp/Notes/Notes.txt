@@ -89,6 +89,76 @@
                 }
 
     > The 4 Pillars of OOP:
+        - Encapsulation: Protecting your data (The Shield)
+        - Inheritance: Reusing code (The Family Tree)
+        - Polymorphism: Flexible code (The Shape-Shifter)
+        - Abstraction: Hiding Complexity (The Interface)
+
+        > Encapsulation:
+            - The Problem: you Asset class looks like this
+                > public decimal Price
+            - Because it is public, anyone can do this in Main:
+                > gold.Price = -5000; // IMPOSSIBLE! Gold cannot have a nagative price
+            - Your program will run, but your logic is corrupted. This is a bug
+            - Solution: We use "encapsulation" to hide the real data (private) and control how it's accessed using Properties (public)
+            - The wires (Private Field): You cannot touch the raw wires. You might get shocked or break it
+            - The Dial (Public Property): You can only turn the dial
+
+        > Inheritance
+            - Inheritance allows you to create a new class based on an existing class
+            - It is the ultimate tool for laziness
+            - It follows the DRY Principle
+            - The Concept: Imagine you are building game with Vehicles
+                - You have a Car, a Truck, and a Motorcycle
+                - They ALL have Speed, Color and Engine
+                - If you write the code for Speed 3 separate times, you are wasting time
+                - Instead, you create a parent class Vehicle with speed/color and the others inherit from it
+
+                - The Hierarchy
+                    - We are going to expand our Trading Bot. Currently, you just have Asset. But in reality:
+                        - Stocks have "Dividends"
+                        - Crypto has "Wallet Addresses"
+                        - Gold has "Purity"
+                    - They are ALL Assets (they all have Price and Name), but they have specific extras
+                    - The 'Is-A' Rule:
+                        - A Stock 'is an' Asset (Inheritance +)
+                        - A Crypto 'is an' Asset (Inheritance +)
+                        - A Bank 'has an' Asset (Inheritance -)
+
+                    - The Syntax: in C#, symbol for inheritance -> :
+
+                    > public class Asset {
+                        public decimal Price;
+                    }
+
+                    public class Stock : Asset {
+                        public decimal Dividend;
+                        // It automatically has 'Price' too!
+
+                        public Stock(string name, decimal price, decimal dividend) : base(name, price) {
+                            this.Dividend = dividend;
+                        }
+                    }
+
+                    public class Crypto : Asset {
+                        public string WalletAddress;
+
+                        public Crypto(string name, decimal price, string walletAddress) : base(name, price) {
+                            this.WalletAddress = walletAddress;
+                        }
+                    }
+
+                    Stock apple = new Stock("Apple", 5123.00m, 1.5m);
+                    Crypto bitcoin = new Crypto("Bitcoin", 95000.00m, "0x123abc...");
+
+                    apple.PrintInfo(); // Comes from parent class -> Asset
+                    bitcoin.PrintInfo();
+
+                    // apple.Dividend | bitcoin.walletAddress
+
+                - Summary
+                    - You defined "PrintInfo" once in the parent Asset, but both Stock and Crypto can use it
+                    - This code reuse
 
     > Interfaces:
 

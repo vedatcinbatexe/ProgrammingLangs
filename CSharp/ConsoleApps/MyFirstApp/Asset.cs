@@ -22,21 +22,35 @@ namespace MyFirstApp {}
 public class Asset
 {
     public string Name;
-    public decimal Price;
-    public string Symbol;
+    public decimal _price;
 
     // Constructor method here with the same name as class
-    public Asset(string name, string symbol, decimal price)
+    public Asset(string name, decimal price)
     {
         // this.Name refers to the Class variable above
         // name refers to the input parameter
         this.Name = name;
-        this.Symbol = symbol;
         this.Price = price;
+    }
+
+    public decimal Price
+    {
+        get { return _price; }
+        set
+        {
+            if (value >= 0)
+            {
+                _price = value;
+            }
+            else
+            {
+                Console.WriteLine("Error: Price cannot be negative!");
+            }
+        }
     }
 
     public void PrintInfo()
     {
-        Console.WriteLine($"Asset: {Name} ({Symbol} - ${Price})");
+        Console.WriteLine($"Asset: {Name} - ${Price}");
     }
 }

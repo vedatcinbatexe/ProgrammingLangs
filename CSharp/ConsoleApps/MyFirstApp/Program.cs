@@ -1,19 +1,25 @@
 ﻿using System;
+using MyFirstApp;
 
 namespace MyFirstApp {}
+ 
+ class Program
+ {
+     // Method: The entry point. 'Main' is C# always starts
+     static void Main(string[] args)
+     {
+         // Create a STOCK
+         Stock apple = new Stock("Apple", 230.0m, 1.5m);
+         
+         // Create a CRYPTO
+         Crypto bitcoin = new Crypto("Bitcoin", 95000.00m, "0x123abc...");
+         
+         Console.Write("--- MARKET DATA ---");
 
-class Program
-{
-    // Method: The entry point. 'Main' is C# always starts
-    static void Main(string[] args)
-    {
-        Asset gold = new Asset("Gold", "XAUUSD", 2650.50m);
-        Asset bitcoin = new Asset("Bitcoin", "BTCUSD", 95000.00m);
-        Asset apple = new Asset("Apple Inc.", "AAPL", 230.00m);
-
-        Console.WriteLine("--- PORTFOLIO ---");
-        gold.PrintInfo();
-        bitcoin.PrintInfo();
-        apple.PrintInfo();
-    }
-}
+         apple.PrintInfo();
+         bitcoin.PrintInfo();
+         
+         Console.WriteLine($"Apple Dividend: ${apple.Dividend}");
+         Console.WriteLine($"BTC Wallet: ${bitcoin.WalletAddress}");
+     }
+ }
